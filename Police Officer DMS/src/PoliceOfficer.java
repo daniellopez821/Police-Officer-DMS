@@ -1,7 +1,12 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+Daniel Lopez-Morales. Software Development 1. 2/22/2025
+This is the police officer class. The purpose of this class is to create all the information on police
+officers. Each element of a police officer is listed along with constructors and setters and getters to
+call them as needed.
+ */
 public class PoliceOfficer {
 
     private String name;
@@ -66,6 +71,8 @@ public class PoliceOfficer {
     }
 
 
+    //To String method. This is the method used when I need to print the layout for a police officers information. This takes no arguements
+    // and returns type string.
     public String toString(){
         String results;
         results = "Name: " + name + "\nBadge #: " + badgeNumber + "\nRank: " + rank + "\nYears of Service: " + serviceYears + "\nLocation: " + location + "\nNumber of Arrests: " + numberOfArrests;
