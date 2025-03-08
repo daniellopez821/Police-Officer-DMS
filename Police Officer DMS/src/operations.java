@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class operations {
 
+    // Created the operations class to hold all the methods used for my DMS.
+
     //AddByFile method. This is the method used to add officers by a text file. This method takes the police officer arraylist as the argument. Return type of arraylist
-    public static ArrayList<PoliceOfficer> addByFile(ArrayList<PoliceOfficer> police, String fileName){
+    public static ArrayList<PoliceOfficer> addByFile(ArrayList<PoliceOfficer> police, File fileName){
         boolean repeat = true;
 
-            File file = new File(fileName);
-
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
                 String line;
 
                 while ((line = br.readLine()) != null) {
@@ -45,7 +45,8 @@ public class operations {
         return police;
     }
 
-    // The updateInfo method. This method ask the user to update info by searching the police officer by badge number. return value arraylist
+    // The updateInfo method is seperated for each element that could be updated to assist in unit testing.
+    // This method ask the user to update info by searching the police officer by badge number. return value arraylist
     public static ArrayList<PoliceOfficer> updateNameInfo(ArrayList<PoliceOfficer> police, int input,String uName){
             for (int i = 0; i < police.size(); i++){
                 if(police.get(i).getBadgeNumber() == input){
@@ -99,7 +100,7 @@ public class operations {
         }
     }
 
-    //This is the custom action Retire Officer Method. This method determines if an officer can retire or not. Takes officer arraylist as argument. No return type
+    //This is the custom action Retire Officer Method. This method determines if an officer can retire or not. Takes officer arraylist as argument. Has a string return type
     public static String retireOfficer(ArrayList<PoliceOfficer> police, int input){
         boolean repeat = true;
         int retire;

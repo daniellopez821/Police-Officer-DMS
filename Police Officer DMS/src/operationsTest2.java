@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,7 +27,8 @@ class operationsTest2 {
     @Test
     void addByFile() {
         String fileName = "C:\\Users\\dl032\\OneDrive\\Desktop\\School\\Software Development 1\\policeofficertext.txt";
-        operations.addByFile(police,fileName);
+        File file = new File(fileName);
+        operations.addByFile(police,file);
         assertTrue(police.size() > 1);
     }
 
