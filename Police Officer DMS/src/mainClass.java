@@ -29,8 +29,12 @@ public class mainClass {
         boolean repeat = true;
         boolean found = false;
 
-        dmsGUI frame = new dmsGUI();
-        frame.enterPanels();
+        //dmsGUI frame = new dmsGUI();
+        //frame.enterPanels();
+
+        databaseGUI frame = new databaseGUI();
+        frame.createPanel();
+
 
         /*
         System.out.println("Menu:\n1.Add Officer By File\n2.Add Officer Manually\n3.Delete Officer\n4.Update Officer Info\n5.Display All Officers\n6.Can Officer Retire?\n7.Quit");
